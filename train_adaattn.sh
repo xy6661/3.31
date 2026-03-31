@@ -1,0 +1,23 @@
+python train_time.py \
+--content_path /mnt/datasets/COCO/train2017 \
+--style_path /mnt/datasets/wikistyle/cityscape \
+--name AdaAttN_test \
+--model adaattn \
+--dataset_mode unaligned \
+--no_dropout \
+--load_size 512 \
+--crop_size 256 \
+--image_encoder_path /mnt/harddisk2/Zhangmengge/codespace/MyAttn/MyAtt_GSA_contentEnhance_XS/models/vgg_normalised.pth \
+--gpu_ids $1 \
+--batch_size $2 \
+--n_epochs 2 \
+--n_epochs_decay 3 \
+--display_freq 1 \
+--display_port 8097 \
+--display_env AdaAttN \
+--lambda_local 0 \
+--lambda_global 4 \
+--lambda_content 2 \
+--lambda_id1 50 \
+--lambda_id2 1 \
+--display_id 0
